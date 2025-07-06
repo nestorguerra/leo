@@ -1,0 +1,28 @@
+
+/* Fuente base */
+html,body{
+    font-family:'Poppins',sans-serif;
+}
+
+/* Ocultar scrollbar cuando sea necesario */
+.no-scrollbar::-webkit-scrollbar{display:none;}
+.no-scrollbar{-ms-overflow-style:none;scrollbar-width:none;}
+
+/* Hero background */
+.hero-bg{
+    background-image:linear-gradient(to top,rgba(253,251,247,1) 20%,rgba(253,251,247,0) 100%),url('data:image/jpeg;base64,/9j/4AAQSk...'); /* original base64 truncado por brevedad */
+    background-size:cover;
+    background-position:center;
+    transition:background-image .5s ease-in-out;
+}
+
+/* Checkboxes personalizados */
+.custom-checkbox{
+    appearance:none;-webkit-appearance:none;height:1.5rem;width:1.5rem;border:2px solid #D1D5DB;border-radius:.375rem;
+    display:inline-block;position:relative;cursor:pointer;flex-shrink:0;
+}
+.custom-checkbox:checked{background-color:#F59E0B;border-color:#F59E0B;}
+.custom-checkbox:checked::after{
+    content:'✔';font-size:1rem;color:#fff;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+}
+.custom-checkbox:checked+.checkbox-label{text-decoration:line-through;color:#9CA3AF;}
